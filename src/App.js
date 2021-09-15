@@ -3,22 +3,33 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() { // this called the state constructor
-     super();
+  constructor() {
+    // this called the state constructor
+    super();
 
-
-this.state = {
-things: 'Hi 👋'
-}
+    this.state = {
+      monsters: [
+        {
+          name: 'Ranu',
+          id: 1
+        },
+        {
+          name: 'Oaru',
+          id: 2
+        },
+        {
+          name: 'Notu',
+          id: 3
+        }
+      ]
+    };
   }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>{this.state.things}</p>
-          <button onClick={() => {this.setState({things: 'Bye MF 🤏'})}}>Check this shit out 🥵</button>
-          </header>
+        {
+          this.state.monsters.map(monsters=><h1 key={monsters.id}>{monsters.name}</h1>)
+        }
       </div>
     );
   }
