@@ -23,13 +23,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CardList name="son">
-          <h1> Yo Fam </h1>
-          {this.state.monsters.map(monsters => (
-            <h1 key={monsters.id}>{monsters.name}</h1>
-          ))}
-        </CardList>
-      </div>
+        <CardList monsters={this.state.monsters} />
+      </div> // here the monsters is a prop which is being used in the card list
     );
   }
 }
