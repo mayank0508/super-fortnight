@@ -10,7 +10,8 @@ class App extends Component {
     super();
 
     this.state = {
-      monsters: []
+      monsters: [],
+      searchFields: '' // beause we want to store the search in the state
     };
   }
 
@@ -21,10 +22,18 @@ class App extends Component {
   }
 
   render() {
+    const { monsters, searchFields } = this.state;
+    const filteredmonsters = monsters.filter(monsters => // this is the main search box function and its works !!
+      monsters.name.toLowerCase().includes(searchFields.toLowerCase())
+    );
     return (
       <div className="App">
-        <input type="search" placeholder="Search Monsters"/>
-        <CardList monsters={this.state.monsters} />
+        <input
+          type="search"
+          placeholder="Search Monsters"
+          onChange={e => this.setState({ searchFields: e.target.value })}
+        />
+        <CardList monsters={filteredmonsters} />
       </div> // here the monsters is a prop which is being used in the card list
     );
   }
