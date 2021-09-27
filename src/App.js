@@ -25,7 +25,7 @@ class App extends Component {
     const { monsters, searchFields } = this.state;
     const filteredmonsters = monsters.filter(monsters => // this is the main search box function and its works !!
       monsters.name.toLowerCase().includes(searchFields.toLowerCase())
-    );
+    ); // this is a live update system
     return (
       <div className="App">
         <input
