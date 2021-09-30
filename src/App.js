@@ -34,6 +34,7 @@ handleChange = (e) => { // this is a lexical scope, this is done using the arrow
     ); // this is a live update system
     return (
       <div className="App">
+        <h1>Monsters Bible</h1> 
         <SearchBox
           placeholder="Search monsters"
           handleChange={this.handleChange}
