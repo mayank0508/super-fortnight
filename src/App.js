@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { SearchBox } from './component/search-box/search-box.component';
 import { CardList } from './component/card-list/card-list.component';
 
 import './App.css';
@@ -21,17 +21,22 @@ class App extends Component {
       .then(users => this.setState({ monsters: users }));
   }
 
+handleChange = (e) => {
+  this.setState({ searchFields: e.target.value });
+}
+
   render() {
     const { monsters, searchFields } = this.state;
-    const filteredmonsters = monsters.filter(monsters => // this is the main search box function and its works !!
-      monsters.name.toLowerCase().includes(searchFields.toLowerCase())
+    const filteredmonsters = monsters.filter(
+      (
+        monsters // this is the main search box function and its works !!
+      ) => monsters.name.toLowerCase().includes(searchFields.toLowerCase())
     ); // this is a live update system
     return (
       <div className="App">
-        <input
-          type="search"
-          placeholder="Search Monsters"
-          onChange={e => this.setState({ searchFields: e.target.value })}
+        <SearchBox
+          placeholder="Search monsters"
+          handleChange={this.handleChange}
         />
         <CardList monsters={filteredmonsters} />
       </div> // here the monsters is a prop which is being used in the card list
