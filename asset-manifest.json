@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/super-fortnight/static/css/main.56520e45.chunk.css",
+    "main.js": "/super-fortnight/static/js/main.58821108.chunk.js",
+    "main.js.map": "/super-fortnight/static/js/main.58821108.chunk.js.map",
+    "runtime-main.js": "/super-fortnight/static/js/runtime-main.c0404341.js",
+    "runtime-main.js.map": "/super-fortnight/static/js/runtime-main.c0404341.js.map",
+    "static/js/2.0c20cb00.chunk.js": "/super-fortnight/static/js/2.0c20cb00.chunk.js",
+    "static/js/2.0c20cb00.chunk.js.map": "/super-fortnight/static/js/2.0c20cb00.chunk.js.map",
+    "static/js/3.8afbac5e.chunk.js": "/super-fortnight/static/js/3.8afbac5e.chunk.js",
+    "static/js/3.8afbac5e.chunk.js.map": "/super-fortnight/static/js/3.8afbac5e.chunk.js.map",
+    "index.html": "/super-fortnight/index.html",
+    "static/css/main.56520e45.chunk.css.map": "/super-fortnight/static/css/main.56520e45.chunk.css.map",
+    "static/js/2.0c20cb00.chunk.js.LICENSE.txt": "/super-fortnight/static/js/2.0c20cb00.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c0404341.js",
+    "static/js/2.0c20cb00.chunk.js",
+    "static/css/main.56520e45.chunk.css",
+    "static/js/main.58821108.chunk.js"
+  ]
+}
