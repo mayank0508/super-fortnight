@@ -21,7 +21,7 @@ class App extends Component {
       .then(users => this.setState({ monsters: users }));
   }
 
-handleChange = (e) => {
+handleChange = (e) => { // this is a lexical scope, this is done using the arrow function, this is really helpful when we are dealing with class methods
   this.setState({ searchFields: e.target.value });
 }
 
