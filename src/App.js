@@ -11,8 +11,7 @@ class App extends Component {
 
     this.state = {
       monsters: [],
-      searchFields: '', // beause we want to store the search in the state
-      title: ''
+      searchFields: '' // beause we want to store the search in the state
     };
   }
 
@@ -23,25 +22,24 @@ class App extends Component {
   }
 
 handleChange = (e) => { // this is a lexical scope, this is done using the arrow function, this is really helpful when we are dealing with class methods
-  this.setState({ searchFields: e.target.value, title: e.target.value });
-
+  this.setState({ searchFields: e.target.value });
 }
 
   render() {
-    const { monsters, searchFields, title } = this.state;
-    // const filteredmonsters = monsters.filter(
-    //   (
-    //     monsters // this is the main search box function and its works !!
-    //   ) => monsters.name.toLowerCase().includes(searchFields.toLowerCase())
-    // ); // this is a live update system
+    const { monsters, searchFields } = this.state;
+    const filteredmonsters = monsters.filter(
+      (
+        monsters // this is the main search box function and its works !!
+      ) => monsters.name.toLowerCase().includes(searchFields.toLowerCase())
+    ); // this is a live update system
     return (
       <div className="App">
-        <h1>{title}</h1> 
+        <h1>Monsters Bible</h1> 
         <SearchBox
           placeholder="Search monsters"
           handleChange={this.handleChange}
         />
-        <CardList monsters={monsters} />
+        <CardList monsters={filteredmonsters} />
       </div> // here the monsters is a prop which is being used in the card list
     );
   }
